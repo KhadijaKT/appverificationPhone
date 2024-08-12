@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        tools:context=".MainActivityKotlin">
+
+        <ImageView
+            android:id="@+id/splashimg"
+            android:layout_width="330dp"
+            android:layout_height="370dp"
+            android:src="@drawable/undraw_login_re_4vu2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/welcometv" />
+
+        <TextView
+            android:id="@+id/welcometv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Welcome! Get to know about phone number authentication here."
+            app:layout_constraintTop_toBottomOf="@+id/splashimg"
+            app:layout_constraintBottom_toTopOf="@id/nextbtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/rubik_bold" />
+
+        <Button
+            android:id="@+id/nextbtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            app:backgroundTint="@color/yellow"
+            app:layout_constraintTop_toBottomOf="@id/welcometv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Click NEXT to continue"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/rubik_regular"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
